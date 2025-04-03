@@ -1,0 +1,100 @@
+/* === Основной стиль для header === */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5); /* Цвета из логина */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Используем тот же шрифт */
+    animation: fadeIn 0.5s ease-in-out; /* Анимация для хедера */
+}
+
+/* Логотип и меню слева */
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-left .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-image {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.logo-title {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: white;
+    margin-right: 30px;
+}
+
+/* Ссылки меню */
+.header-left .tabs {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.header-left .tabs:hover {
+    color: #3a6fd6; /* Цвет при наведении, соответствует кнопке логина */
+}
+
+/* Правое меню */
+.header-right .tabs {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.header-right .tabs:hover {
+    color: #ff6b6b; /* Цвет при наведении, как у кнопки logout */
+}
+
+/* === Анимация для логотипа === */
+.logo-image:hover {
+    transform: scale(1.2);
+}
+
+/* === Адаптивность === */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .header-left, .header-right {
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo-title {
+        margin-top: 10px;
+    }
+    .tabs {
+        margin: 10px 0;
+    }
+}
+
+/* === Анимация хедера === */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,26 @@
+<div *ngIf="isLoading" class="loading-container">
+  <p>📚 Loading your borrowed books...</p>
+</div>
+
+<div *ngIf="!isLoading" class="borrowed-books-container">
+  <h2>📖 Your Borrowed Books</h2>
+
+  <div *ngIf="transactions.length === 0" class="no-books">
+    <p>You have no borrowed books at the moment.</p>
+  </div>
+
+  <ul class="borrowed-list">
+    <li *ngFor="let transaction of transactions" class="borrowed-item">
+      <div class="book-info">
+        <span class="book-title">📌 Transaction ID: {{ transaction.id }}</span>
+        <span>📖 Book ID: {{ transaction.bookId }}</span>
+        <span>📅 Borrowed On: <strong>{{ transaction.borrowedDate | date:'mediumDate' }}</strong></span>
+        <span>⏳ Return By: <strong>{{ transaction.returnDate | date:'mediumDate' }}</strong></span>
+      </div>
+
+      <button *ngIf="transaction.id !== undefined" (click)="returnBook(transaction.id)" class="return-btn">
+        🔄 Return Book
+      </button>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,19 @@
+<div *ngIf="isLoading" class="alert alert-info">📚 Loading books...</div>
+<div *ngIf="error" class="alert alert-danger">❌ {{ error }}</div>
+
+<div *ngIf="!isLoading && !error">
+  <div class="book-grid">
+    <div class="book-card" *ngFor="let book of books">
+      <div class="book-cover">
+        <img *ngIf="book.pictureUrl" [src]="book.pictureUrl" alt="{{ book.title }} cover">
+      </div>
+      <div class="book-info">
+        <h3>{{ book.title }}</h3>
+        <p class="author">by {{ book.author }}</p>
+        <button (click)="borrowBook(book.id)" [disabled]="!book.available" class="borrow-btn">
+          {{ book.available ? '📖 Borrow' : '❌ Unavailable' }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

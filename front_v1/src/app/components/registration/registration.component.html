@@ -1,0 +1,33 @@
+<div class="registration-wrapper">
+  <div class="registration-container">
+    <h1>🚀 Create Your Account</h1>
+    <p class="subtitle">Join us today and start exploring!</p>
+
+    <form #registrationForm="ngForm" (ngSubmit)="onRegister(registrationForm)">
+      <div class="input-box">
+        <i class="bx bxs-user"></i>
+        <input type="text" id="username" name="username" [(ngModel)]="username" placeholder="Username" required>
+      </div>
+
+      <div class="input-box">
+        <i class="bx bxs-envelope"></i>
+        <input type="email" id="email" name="email" [(ngModel)]="email" placeholder="Email" required>
+      </div>
+
+      <div class="input-box">
+        <i class="bx bxs-lock-alt"></i>
+        <input type="password" id="password" name="password" [(ngModel)]="password" placeholder="Password" required>
+      </div>
+
+      <button type="submit" class="btn-register" [disabled]="!registrationForm.valid">Sign Up</button>
+
+      <div class="login-link">
+        <p>Already have an account? <a [routerLink]="['/login']">Login</a></p>
+      </div>
+
+      <div *ngIf="error" class="error-message">
+        ❌ {{ error }}
+      </div>
+    </form>
+  </div>
+</div>
