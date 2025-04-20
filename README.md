@@ -48,8 +48,8 @@ This is a web application project for Browse and purchasing books online. The ba
 
 1.  **Clone the repository:**
     ```bash
-    git clone [Your Repository URL]
-    cd [your-project-folder]/[backend-folder-name]
+    git clone [https://github.com/Asylzhann/Web-Dev-Project]
+    cd [project]/[bookstore]
     ```
 2.  **Create and activate a virtual environment:**
     ```bash
@@ -63,7 +63,6 @@ This is a web application project for Browse and purchasing books online. The ba
     ```bash
     pip install -r requirements.txt
     ```
-    *(Ensure you have a `requirements.txt` file listing all packages: `django`, `djangorestframework`, `djangorestframework-simplejwt`, `django-cors-headers`, etc.)*
 4.  **Apply migrations:**
     ```bash
     python manage.py migrate
@@ -82,13 +81,12 @@ This is a web application project for Browse and purchasing books online. The ba
 
 1.  **Navigate to the frontend directory:**
     ```bash
-    cd [your-project-folder]/[frontend-folder-name]
+    cd [project]/[bookstore-frontend]
     ```
 2.  **Install dependencies:**
     ```bash
     npm install
     ```
-    *(Or `yarn install` if you use Yarn)*
 3.  **Run the Angular development server:**
     ```bash
     ng serve --open
