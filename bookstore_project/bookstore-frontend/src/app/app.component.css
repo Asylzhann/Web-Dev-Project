@@ -1,0 +1,60 @@
+nav {
+    background: linear-gradient(to right, #0288d1, #03a9f4);
+    padding: 15px 25px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 12px rgba(0, 105, 148, 0.2);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  nav a.active {
+    background-color: white;
+    color: #0288d1;
+    font-weight: bold;
+  }
+  
+  nav span {
+    color: #e3f2fd;
+    font-style: italic;
+    margin-right: 10px;
+  }
+  
+  nav button {
+    background-color: #ef5350;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  nav button:hover {
+    background-color: #e53935;
+    transform: translateY(-2px);
+  }
+  
+  main {
+    padding: 40px 20px;
+  }
+  
+  

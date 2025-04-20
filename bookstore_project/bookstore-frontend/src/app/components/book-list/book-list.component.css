@@ -1,0 +1,92 @@
+.list-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 25px;
+    background: linear-gradient(to right, #e1f5fe, #b3e5fc);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 105, 148, 0.2);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #01579b;
+  }
+  
+  .list-container h2 {
+    text-align: center;
+    color: #0288d1;
+    margin-bottom: 25px;
+  }
+  
+  .error-message {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .book-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .book-item {
+    background-color: #ffffff;
+    border: 1px solid #b3e5fc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 6px rgba(2, 119, 189, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .book-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(2, 119, 189, 0.2);
+  }
+  
+  .book-item a {
+    text-decoration: none;
+    color: #0277bd;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .book-item a:hover {
+    text-decoration: underline;
+  }
+  
+  .book-author,
+  .book-price,
+  .book-category {
+    font-size: 15px;
+    color: #01579b;
+  }
+  
+  .book-item button {
+    align-self: flex-start;
+    margin-top: 8px;
+    background-color: #03a9f4;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .book-item button:hover {
+    background-color: #0288d1;
+  }
+  
+  .loading-message {
+    text-align: center;
+    color: #039be5;
+    font-style: italic;
+    margin-top: 20px;
+  }
+  
